@@ -1,8 +1,9 @@
 from fastapi import FastAPI
 import uvicorn
+from class_info.lessons.opening_file import Helper
 
 app = FastAPI()
-
+data = Helper()
 
 # First we make some fake data to be able to use as our "database calls"
 class_pass_chance = [
@@ -30,14 +31,12 @@ class_pass_chance = [
 ]
 
 
-# Here we see that order matters. Going to this path will trigger this route first rather than the next because it
-# comes first
 @app.get("/class_pass_chance/intro")
 async def get_me():
     return {"participant": "chance to fail the class"}
 
 
-# Parameters in our route definitions allow us to match multiple paths
+
 @app.get("/class_pass_chance/{Participant}")
 async def get_profile(participant_name: str):
     for participant in class_pass_chance:
@@ -45,8 +44,6 @@ async def get_profile(participant_name: str):
             return participant
     return {"msg": "User not found"}
 
-
-# Here we see another way to create dynamic routes using query parameters
 
 
 @app.get("/number of participants involved")
