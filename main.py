@@ -49,8 +49,8 @@ async def get_profile(participant_name: str):
 # Here we see another way to create dynamic routes using query parameters
 
 
-@app.get("/secret")
+@app.get("/number of participants involved")
 async def get_secret():
-    return {"msg": "The secret is: I don't have a secret"}
+    return {"msg": "There are 20 participants."}
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", reload=True)
