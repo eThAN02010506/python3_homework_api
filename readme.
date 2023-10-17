@@ -3,4 +3,13 @@ Create direction for accessing server:Data, Routes(2), app key
 readme
 software:consume API, readme
 
-The web contains data about possible fail rate for students in Python 3, using a~z as representation.
+The web contains data about possible fail rate for students in Gamedesign 3, using a~z as representation.
+
+Using: /class_pass_chance/{participant_name}/fail_chance , will lead to the chance to fail and the student's name (a~z)
+Using: /class_pass_chance/{participant_name}/age , will lead to the age and participant name
+Using: "/class_pass_chance/info" will lead to introduction.
+Note that, API_KEYS = ["060501", "060212"]
+I named it api_key.
+
+sample: http://0.0.0.0:8000/class_pass_chance/a/age?api_key=060212
+
