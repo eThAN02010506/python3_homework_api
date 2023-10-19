@@ -5,11 +5,37 @@ software:consume API, readme
 
 The web contains data about possible fail rate for students in Gamedesign 3, using a~z as representation.
 
+Here are the list:
+
+    {"Participant": "a", "chance to fail the class": 0.100, "age": 18},
+    {"Participant": "b", "chance to fail the class": 0.110, "age": 17},
+    {"Participant": "c", "chance to fail the class": 0.411, "age": 12},
+    {"Participant": "d", "chance to fail the class": 0.541, "age": 124},
+    {"Participant": "e", "chance to fail the class": 0.154, "age": 15},
+    {"Participant": "f", "chance to fail the class": 0.415, "age": 16},
+    {"Participant": "g", "chance to fail the class": 0.141, "age": 18},
+    {"Participant": "h", "chance to fail the class": 0.114, "age": 13},
+    {"Participant": "i", "chance to fail the class": 0.011, "age": 124},
+    {"Participant": "j", "chance to fail the class": 0.001, "age": 15},
+    {"Participant": "k", "chance to fail the class": 0.123, "age": 16},
+    {"Participant": "l", "chance to fail the class": 0.200, "age": 12},
+    {"Participant": "m", "chance to fail the class": 1.000, "age": 19},
+    {"Participant": "o", "chance to fail the class": 1.000, "age": 18},
+    {"Participant": "p", "chance to fail the class": 0.932, "age": 18},
+    {"Participant": "q", "chance to fail the class": 0.211, "age": 18},
+    {"Participant": "r", "chance to fail the class": 0.985, "age": 17},
+    {"Participant": "y", "chance to fail the class": 0.222, "age": 17},
+    {"Participant": "x", "chance to fail the class": 0.865, "age": 16},
+    {"Participant": "z", "chance to fail the class": 1.000, "age": 19},
+
+
 Using: /class_pass_chance/{participant_name}/fail_chance , will lead to the chance to fail and the student's name (a~z)
 Using: /class_pass_chance/{participant_name}/age , will lead to the age and participant name
 Using: "/class_pass_chance/info" will lead to introduction.
+Using: "/class_pass_chance/get_key"
 Note that, API_KEYS = ["060501", "060212"]
-I named it api_key.
+I named it api_key, so remember to add the api_key at the end of the route, like the sample lower.
+
+Again, always remember add "?api_key=" and the correct key
 
 sample: http://0.0.0.0:8000/class_pass_chance/a/age?api_key=060212
-

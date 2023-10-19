@@ -70,7 +70,7 @@ async def get_key():
     return f"api key are.... why do you think I would tell you?"
 
 @app.get("/class_pass_chance/info")
-async def intro(api_key: str):
+async def intro(api_key: str = None):
     if api_key in API_KEYS:
         return("Hello there! this is about the class fail chance in Gamedesign 3!")
     return f"nah man. You probably in the wrong place. Else, check the api_key!"
